@@ -10,18 +10,19 @@ public class BulletController : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>();
+        rb.velocity = new Vector3(0, 0, 10);
     }
 
     // Update is called once per frame
     void Update()
     {
-        rb.velocity = new Vector3(0, 0, 10);
-        moveBullet();
+             moveBullet();
+        //testParameters();
     }
 
     void moveBullet()
     {
-        Debug.Log(this.name);
+        //Debug.Log(this.name);
         //rb.AddForce();
     }
 
@@ -32,4 +33,13 @@ public class BulletController : MonoBehaviour
             Debug.Log("hit");
         }
     }
+
+    public void testParameters()
+    {
+
+        //Debug.Log(this.name + " : " + vel);
+        rb.velocity = new Vector3(0,0,10);
+
+    }
+
 }
