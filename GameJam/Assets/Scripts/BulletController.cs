@@ -16,14 +16,10 @@ public class BulletController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-             moveBullet();
+        checkBound();
+        rb.rotation = Quaternion.Euler
+            (rb.rotation.eulerAngles + new Vector3(0f, 1 * Input.GetAxis("Mouse X"), 0f));
         //testParameters();
-    }
-
-    void moveBullet()
-    {
-        //Debug.Log(this.name);
-        //rb.AddForce();
     }
 
     public void OnCollisionEnter(Collision collision)
@@ -34,11 +30,27 @@ public class BulletController : MonoBehaviour
         }
     }
 
-    public void testParameters()
+    void checkBound()
     {
+        if(transform.position.y < -5)
+        {
+            bm.resetBullet(this.gameObject);
+            rb.velocity = new Vector3(0, 0, 0);
+        }
+    }
+
+    public void testParameters(Vector3 vel)
+    {
+        
+        Vector3 mousePos = Input.mousePosition;
+        mousePos.z = -Camera.main.transform.position.z;
+        mousePos = Camera.main.ScreenToWorldPoint(mousePos);
+        Vector3 r = mousePos - transform.position;
+        rb.AddForce(r * 2, ForceMode.Impulse);
 
         //Debug.Log(this.name + " : " + vel);
-        rb.velocity = new Vector3(0,0,10);
+
+        //rb.velocity = vel;
 
     }
 

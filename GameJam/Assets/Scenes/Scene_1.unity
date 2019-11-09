@@ -831,6 +831,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bm: {fileID: 511583332}
+  bc: {fileID: 2482073639197914220, guid: 61e0cbb0935220847af4ada3bba0f266, type: 3}
   spawn: {fileID: 2000170189}
 --- !u!4 &1827557597
 Transform:
