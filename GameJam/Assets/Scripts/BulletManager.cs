@@ -11,10 +11,10 @@ public class BulletManager : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i <= sizeList; i++)
+        for (int i = 0; i < sizeList; i++)
         {
             people.Add(Instantiate(gift, new Vector3(0,0,0), Quaternion.identity));
-            people[i].GetComponent<BulletController>().pc = this;
+            people[i].GetComponent<BulletController>().bm = this;
             people[i].SetActive(false);
             people[i].transform.name = "Bullet_" + i;
         }
@@ -29,16 +29,18 @@ public class BulletManager : MonoBehaviour
 
     public GameObject getBullet()
     {
-       if(sizeList > people.Count - 2)
+        int temp2 = sizeList;
+        if (sizeList > people.Count - 1)
         {
             sizeList = 0;
+            temp2 = sizeList;
         }
         else
         {
             sizeList++;
         }
 
-        return people[sizeList];
+        return people[temp2];
             
         
     }
