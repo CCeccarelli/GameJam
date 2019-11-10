@@ -1,12 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class BulletController : MonoBehaviour
 {
     public BulletManager bm;
     Rigidbody rb;
     public AudioSource hitSound;
+    public bool colliding;
 
     // Start is called before the first frame update
     void Start()
@@ -19,6 +21,7 @@ public class BulletController : MonoBehaviour
         Vector3 r = mousePos - transform.position;
         rb.AddForce(r * 2, ForceMode.Impulse);
         hitSound = GetComponent<AudioSource>();
+
     }
 
     // Update is called once per frame
@@ -29,16 +32,22 @@ public class BulletController : MonoBehaviour
         //    (rb.rotation.eulerAngles + new Vector3(0f, 1 * Input.GetAxis("Mouse X"), 0f));
         //testParameters();
         hitSound.Play();
+
     }
 
     public void OnCollisionEnter(Collision collision)
     {
         if(collision.transform.GetComponent<Renderer>().material.color == this.gameObject.GetComponent<Renderer>().material.color)
         {
+            colliding = true;
             //Debug.Log("hit");
             //bm.giftList.RemoveAt(bm.sizeList);
-            bm.resetBullet(this.gameObject);          
+            bm.resetBullet(this.gameObject);
 
+        }
+        else
+        {
+            colliding = false;
         }
     }
 

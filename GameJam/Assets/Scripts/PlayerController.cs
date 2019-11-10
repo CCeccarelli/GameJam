@@ -1,12 +1,16 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     public BulletManager bm;
     public BulletController bc;
     public GameObject spawn;
+
+    public int score;
+    public Text scoreText;
 
     void Start()
     {
@@ -20,6 +24,15 @@ public class PlayerController : MonoBehaviour
             fire();
             
         }
+        if(bc.colliding == true)
+        {
+            score++;
+        }
+        else
+        {
+
+        }
+        scoreText.text = "Score: " + score;
     }
 
     void fire()
