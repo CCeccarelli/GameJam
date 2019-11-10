@@ -10,10 +10,15 @@ public class PlayerController : MonoBehaviour
     public GameObject spawn;
     public int score = 0;
     public Text scoreText;
+    public RawImage imgBlue;
+    public RawImage imgGreen;
+    public RawImage imgYellow;
 
     void Start()
     {
         bc.GetComponent<Rigidbody>();
+        imgGreen.enabled = false;
+        imgYellow.enabled = false;
     }
 
     void Update()
@@ -36,5 +41,24 @@ public class PlayerController : MonoBehaviour
         var instatiatedBC = temp.GetComponent<BulletController>();
         instatiatedBC.testParameters(new Vector3(0,0,2));
         Debug.Log(bm.index);
+
+        if(bm.index == 0)
+        {
+            imgBlue.enabled = false;
+            imgGreen.enabled = true;
+            imgYellow.enabled = false;
+        }
+        else if (bm.index == 1)
+        {
+            imgBlue.enabled = false;
+            imgGreen.enabled = false;
+            imgYellow.enabled = true;
+        }
+        else if (bm.index == 2)
+        {
+            imgBlue.enabled = true;
+            imgGreen.enabled = false;
+            imgYellow.enabled = false;
+        }
     }
 }
