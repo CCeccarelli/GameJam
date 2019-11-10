@@ -9,10 +9,11 @@ public class BulletManager : MonoBehaviour
     public List<GameObject> giftList;
     public List<Material> matList;
     public int sizeList;
+    public int sizeMaterial;
     // Start is called before the first frame update
     void Start()
     {
-        for (int i = 0; i < sizeList; i++)
+        for (int i = 0; i < sizeMaterial; i++)
         {
             matList.Add(Resources.Load("Material/blue", typeof(Material)) as Material);
             matList.Add(Resources.Load("Material/darkGreen", typeof(Material)) as Material);
@@ -39,22 +40,21 @@ public class BulletManager : MonoBehaviour
        
     }
 
+    /// <summary>
+    /// Returns a bullet object from the object pool.
+    /// </summary>
+    /// <returns>A bullet GameObject</returns>
     public GameObject getBullet()
     {
-        int temp2 = sizeList;
-        if (sizeList > giftList.Count - 1)
+        if(sizeList > 2)
         {
             sizeList = 0;
-            temp2 = sizeList;
+            return giftList[sizeList++];
         }
         else
         {
-            sizeList++;
-        }
-
-        return giftList[temp2];
-            
-        
+            return giftList[sizeList++];
+        }      
     }
 
     public void resetBullet(GameObject b)
