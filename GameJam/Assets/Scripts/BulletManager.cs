@@ -6,18 +6,30 @@ public class BulletManager : MonoBehaviour
 {
     public GameObject gift;
     GameObject temp;
-    public List<GameObject> people;
+    public List<GameObject> giftList;
+    public List<Material> matList;
     public int sizeList;
     // Start is called before the first frame update
     void Start()
     {
         for (int i = 0; i < sizeList; i++)
         {
-            people.Add(Instantiate(gift, new Vector3(0,0,0), Quaternion.identity));
-            people[i].GetComponent<BulletController>().bm = this;
-            people[i].SetActive(false);
-            people[i].transform.name = "Bullet_" + i;
+            matList.Add(Resources.Load("Material/blue", typeof(Material)) as Material);
+            matList.Add(Resources.Load("Material/darkGreen", typeof(Material)) as Material);
+            matList.Add(Resources.Load("Material/yellow", typeof(Material)) as Material);
         }
+
+        for (int i = 0; i < sizeList; i++)
+        {
+            
+            giftList.Add(Instantiate(gift, new Vector3(0,0,0), Quaternion.identity));
+            giftList[i].GetComponent<Renderer>().material = matList[i];
+            giftList[i].GetComponent<BulletController>().bm = this;
+            giftList[i].SetActive(false);
+            giftList[i].transform.name = "Bullet_" + i;
+            
+        }
+        
         sizeList = 0;
     }
 
@@ -30,7 +42,7 @@ public class BulletManager : MonoBehaviour
     public GameObject getBullet()
     {
         int temp2 = sizeList;
-        if (sizeList > people.Count - 1)
+        if (sizeList > giftList.Count - 1)
         {
             sizeList = 0;
             temp2 = sizeList;
@@ -40,7 +52,7 @@ public class BulletManager : MonoBehaviour
             sizeList++;
         }
 
-        return people[temp2];
+        return giftList[temp2];
             
         
     }
