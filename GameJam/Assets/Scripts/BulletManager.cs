@@ -46,7 +46,7 @@ public class BulletManager : MonoBehaviour
     /// <returns>A bullet GameObject</returns>
     public GameObject getBullet()
     {
-        if(sizeList > 2)
+        if(sizeList > giftList.Count - 1)
         {
             sizeList = 0;
             return giftList[sizeList++];
