@@ -339,6 +339,7 @@ MonoBehaviour:
   giftList: []
   matList: []
   sizeList: 3
+  sizeMaterial: 3
 --- !u!4 &511583333
 Transform:
   m_ObjectHideFlags: 0
