@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        
+        bc.GetComponent<Rigidbody>();
     }
 
     void Update()
