@@ -11,6 +11,7 @@ public class BulletManager : MonoBehaviour
     public List<Material> matList;
     public int sizeList;
     public int sizeMaterial;
+    public int index;
 
     // Start is called before the first frame update
     void Start()
@@ -51,10 +52,12 @@ public class BulletManager : MonoBehaviour
         if(sizeList > giftList.Count - 1)
         {
             sizeList = 0;
+            index = sizeList;
             return giftList[sizeList++];
         }
         else
         {
+            index = sizeList;
             return giftList[sizeList++];
         }      
     }

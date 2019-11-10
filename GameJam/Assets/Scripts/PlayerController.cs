@@ -35,5 +35,6 @@ public class PlayerController : MonoBehaviour
         //temp.GetComponent<BulletController>().testParameters(new Vector3(0,1,2));
         var instatiatedBC = temp.GetComponent<BulletController>();
         instatiatedBC.testParameters(new Vector3(0,0,2));
+        Debug.Log(bm.index);
     }
 }
