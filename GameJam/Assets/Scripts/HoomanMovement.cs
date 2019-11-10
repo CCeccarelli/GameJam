@@ -16,6 +16,7 @@ public class HoomanMovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Toheed is a bucktee
         startX = (int)mooMan.transform.position.x;
         cutLeft = (rnd.Next(0, 2)) == 1;
         range = (float)(rnd.NextDouble() + 0.4);
