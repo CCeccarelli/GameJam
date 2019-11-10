@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657844, g: 0.49641222, b: 0.57481694, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657838, g: 0.49641234, b: 0.57481676, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -364,6 +364,7 @@ GameObject:
   m_Component:
   - component: {fileID: 512925182}
   - component: {fileID: 512925183}
+  - component: {fileID: 512925184}
   m_Layer: 0
   m_Name: Dood
   m_TagString: Untagged
@@ -435,6 +436,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.060733378, y: 0.07731728, z: 0.10692334}
     m_Extent: {x: 2.0122612, y: 0.30235213, z: 2.5289602}
   m_DirtyAABB: 0
+--- !u!114 &512925184
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512925181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f100b0116ae4b8782a1b80b1db3cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mooMan: {fileID: 0}
 --- !u!1 &584738783
 GameObject:
   m_ObjectHideFlags: 0
@@ -540,6 +554,7 @@ GameObject:
   - component: {fileID: 632688066}
   - component: {fileID: 632688065}
   - component: {fileID: 632688064}
+  - component: {fileID: 632688068}
   m_Layer: 0
   m_Name: Hooman2
   m_TagString: Untagged
@@ -633,6 +648,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &632688068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 632688063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f100b0116ae4b8782a1b80b1db3cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mooMan: {fileID: 632688063}
 --- !u!64 &704758532
 MeshCollider:
   m_ObjectHideFlags: 0
@@ -748,6 +776,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734529812}
   - component: {fileID: 734529813}
+  - component: {fileID: 734529814}
   m_Layer: 0
   m_Name: Dood
   m_TagString: Untagged
@@ -819,6 +848,19 @@ SkinnedMeshRenderer:
     m_Center: {x: -0.060733378, y: 0.07731728, z: 0.10692334}
     m_Extent: {x: 2.0122612, y: 0.30235213, z: 2.5289602}
   m_DirtyAABB: 0
+--- !u!114 &734529814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 734529811}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f100b0116ae4b8782a1b80b1db3cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mooMan: {fileID: 0}
 --- !u!1 &899131580
 GameObject:
   m_ObjectHideFlags: 0
@@ -1162,6 +1204,7 @@ GameObject:
   - component: {fileID: 1155399969}
   - component: {fileID: 1155399968}
   - component: {fileID: 1155399967}
+  - component: {fileID: 1155399971}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -1249,6 +1292,19 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &1155399971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155399966}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f100b0116ae4b8782a1b80b1db3cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mooMan: {fileID: 0}
 --- !u!1 &1827557595
 GameObject:
   m_ObjectHideFlags: 0
@@ -1505,6 +1561,7 @@ GameObject:
   - component: {fileID: 2145304614}
   - component: {fileID: 2145304613}
   - component: {fileID: 2145304612}
+  - component: {fileID: 2145304616}
   m_Layer: 0
   m_Name: Hooman3
   m_TagString: Untagged
@@ -1598,6 +1655,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+--- !u!114 &2145304616
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2145304611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f100b0116ae4b8782a1b80b1db3cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mooMan: {fileID: 2145304611}
 --- !u!137 &1046297975643771911
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 0
@@ -1725,6 +1795,7 @@ GameObject:
   - component: {fileID: 3166231813423075370}
   - component: {fileID: 704758532}
   - component: {fileID: 8296172668715913028}
+  - component: {fileID: 8296172668715913029}
   m_Layer: 0
   m_Name: Hooman
   m_TagString: Untagged
@@ -1770,3 +1841,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8296172668715913029
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8296172668715913027}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15f100b0116ae4b8782a1b80b1db3cc3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  mooMan: {fileID: 8296172668715913027}

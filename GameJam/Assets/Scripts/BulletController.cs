@@ -5,16 +5,16 @@ using UnityEngine.UI;
 
 public class BulletController : MonoBehaviour
 {
+    public PlayerController pc;
     public BulletManager bm;
     Rigidbody rb;
     public AudioSource hitSound;
-    public bool colliding;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody>();
-
+        pc = GameObject.Find("Player").GetComponent<PlayerController>();
         Vector3 mousePos = Input.mousePosition;
         mousePos.z = -Camera.main.transform.position.z;
         mousePos = Camera.main.ScreenToWorldPoint(mousePos);
@@ -39,15 +39,11 @@ public class BulletController : MonoBehaviour
     {
         if(collision.transform.GetComponent<Renderer>().material.color == this.gameObject.GetComponent<Renderer>().material.color)
         {
-            colliding = true;
             //Debug.Log("hit");
             //bm.giftList.RemoveAt(bm.sizeList);
             bm.resetBullet(this.gameObject);
+            pc.score++;
 
-        }
-        else
-        {
-            colliding = false;
         }
     }
 

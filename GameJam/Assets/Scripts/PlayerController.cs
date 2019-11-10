@@ -8,8 +8,7 @@ public class PlayerController : MonoBehaviour
     public BulletManager bm;
     public BulletController bc;
     public GameObject spawn;
-
-    public int score;
+    public int score = 0;
     public Text scoreText;
 
     void Start()
@@ -24,14 +23,7 @@ public class PlayerController : MonoBehaviour
             fire();
             
         }
-        if(bc.colliding == true)
-        {
-            score++;
-        }
-        else
-        {
 
-        }
         scoreText.text = "Score: " + score;
     }
 
